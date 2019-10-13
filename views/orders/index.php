@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Date',
             'Customers_IdCustomer',
             'Users_IdUser',
-            'Literature_IdLiterature',
+//            'Literature_IdLiterature',
             //'Count',
 
             ['class' => 'yii\grid\ActionColumn'],

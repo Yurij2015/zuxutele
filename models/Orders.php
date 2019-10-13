@@ -51,11 +51,11 @@ class Orders extends \yii\db\ActiveRecord
     {
         return [
             'IdOrder' => 'Id Order',
-            'Date' => 'Date',
-            'Customers_IdCustomer' => 'Customers Id Customer',
+            'Date' => 'Дата',
+            'Customers_IdCustomer' => 'Клиент',
             'Users_IdUser' => 'Users Id User',
-            'Literature_IdLiterature' => 'Literature Id Literature',
-            'Count' => 'Count',
+            'Literature_IdLiterature' => 'Услуга',
+            'Count' => 'Количество',
         ];
     }
 
