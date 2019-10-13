@@ -36,31 +36,34 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-//            ['label' => 'Home', 'url' => ['/site/index']],
-//            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Категории', 'url' => ['/category/index']],
-            ['label' => 'Клиенты', 'url' => ['/customers/index']],
-            ['label' => 'Заявки', 'url' => ['/orders/index']],
-            ['label' => 'Продажи', 'url' => ['/sales/index']],
-            ['label' => 'Услуги', 'url' => ['/services/index']],
-//            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
+    try {
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => [
+                //            ['label' => 'Home', 'url' => ['/site/index']],
+                //            ['label' => 'About', 'url' => ['/site/about']],
+                ['label' => 'Категории', 'url' => ['/category/index']],
+                ['label' => 'Клиенты', 'url' => ['/customers/index']],
+                ['label' => 'Заявки', 'url' => ['/orders/index']],
+                ['label' => 'Продажи', 'url' => ['/sales/index']],
+                ['label' => 'Услуги', 'url' => ['/services/index']],
+                //            ['label' => 'Contact', 'url' => ['/site/contact']],
+                Yii::$app->user->isGuest ? (
                 ['label' => 'Войти', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Выйти (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post')
+                    . Html::submitButton(
+                        'Выйти (' . Yii::$app->user->identity->username . ')',
+                        ['class' => 'btn btn-link logout']
+                    )
+                    . Html::endForm()
+                    . '</li>'
                 )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
+            ],
+        ]);
+    } catch (Exception $e) {
+    }
     NavBar::end();
     ?>
 
