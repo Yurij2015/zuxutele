@@ -41,9 +41,9 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdCategory' => Yii::t('translatezazu', 'Id Category'),
-            'Name' => Yii::t('translatezazu', 'Name'),
-            'Description' => Yii::t('translatezazu', 'Description'),
+            'IdCategory' => 'Id Category',
+            'Name' => 'Name',
+            'Description' => 'Description',
         ];
     }
 

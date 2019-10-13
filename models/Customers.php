@@ -45,12 +45,12 @@ class Customers extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdCustomer' => Yii::t('translatezazu', 'Id Customer'),
-            'SecondName' => Yii::t('translatezazu', 'Second Name'),
-            'FirstName' => Yii::t('translatezazu', 'First Name'),
-            'MiddleName' => Yii::t('translatezazu', 'Middle Name'),
-            'Address' => Yii::t('translatezazu', 'Address'),
-            'Phone' => Yii::t('translatezazu', 'Phone'),
+            'IdCustomer' => 'Id Customer',
+            'SecondName' => 'Second Name',
+            'FirstName' => 'First Name',
+            'MiddleName' => 'Middle Name',
+            'Address' => 'Address',
+            'Phone' => 'Phone',
         ];
     }
 

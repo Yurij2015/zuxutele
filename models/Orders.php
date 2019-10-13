@@ -50,12 +50,12 @@ class Orders extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdOrder' => Yii::t('translatezazu', 'Id Order'),
-            'Date' => Yii::t('translatezazu', 'Date'),
-            'Customers_IdCustomer' => Yii::t('translatezazu', 'Customers Id Customer'),
-            'Users_IdUser' => Yii::t('translatezazu', 'Users Id User'),
-            'Literature_IdLiterature' => Yii::t('translatezazu', 'Literature Id Literature'),
-            'Count' => Yii::t('translatezazu', 'Count'),
+            'IdOrder' => 'Id Order',
+            'Date' => 'Date',
+            'Customers_IdCustomer' => 'Customers Id Customer',
+            'Users_IdUser' => 'Users Id User',
+            'Literature_IdLiterature' => 'Literature Id Literature',
+            'Count' => 'Count',
         ];
     }
 
