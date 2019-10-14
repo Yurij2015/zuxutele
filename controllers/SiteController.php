@@ -2,7 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\User;
 use Yii;
+use yii\base\Exception;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -125,4 +127,27 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+// add user action
+    public function actionAddAdmin()
+    {
+        $model = User::find()->where(['username' => 'admin'])->one();
+        if (empty($model)) {
+            $user = new User();
+            $user->username = 'admin';
+            $user->email = 'admin@webhouse.net';
+            try {
+                $user->setPassword('3004917779');
+            } catch (Exception $e) {
+            }
+            try {
+                $user->generateAuthKey();
+            } catch (Exception $e) {
+            }
+            if ($user->save()) {
+                echo 'good';
+            }
+        }
+    }
+
 }
