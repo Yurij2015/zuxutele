@@ -42,6 +42,7 @@ AppAsset::register($this);
             'items' => [
                 //            ['label' => 'Home', 'url' => ['/site/index']],
                 //            ['label' => 'About', 'url' => ['/site/about']],
+
                 ['label' => 'Категории', 'url' => ['/category/index']],
                 ['label' => 'Клиенты', 'url' => ['/customers/index']],
                 ['label' => 'Заявки', 'url' => ['/orders/index']],
