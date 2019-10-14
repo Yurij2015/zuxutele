@@ -128,26 +128,25 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-// add user action
-    public function actionAddAdmin()
-    {
-        $model = User::find()->where(['username' => 'admin'])->one();
-        if (empty($model)) {
-            $user = new User();
-            $user->username = 'admin';
-            $user->email = 'admin@webhouse.net';
-            try {
-                $user->setPassword('3004917779');
-            } catch (Exception $e) {
-            }
-            try {
-                $user->generateAuthKey();
-            } catch (Exception $e) {
-            }
-            if ($user->save()) {
-                echo 'good';
-            }
-        }
-    }
-
+//// add user action
+//    public function actionAddAdmin()
+//    {
+//        $model = User::find()->where(['username' => 'admin'])->one();
+//        if (empty($model)) {
+//            $user = new User();
+//            $user->username = 'admin';
+//            $user->email = 'admin@webhouse.net';
+//            try {
+//                $user->setPassword('3004917779');
+//            } catch (Exception $e) {
+//            }
+//            try {
+//                $user->generateAuthKey();
+//            } catch (Exception $e) {
+//            }
+//            if ($user->save()) {
+//                echo 'good';
+//            }
+//        }
+//    }
 }
